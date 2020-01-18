@@ -1,5 +1,9 @@
 package datastructure;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.util.Stack;
+
 public class DataReader {
 
 	public static void main(String[] args) {
@@ -19,9 +23,44 @@ public class DataReader {
 		 */
 
 		String textFile = System.getProperty("user.dir") + "/src/data/self-driving-car.txt";
+		FileReader fr = null;
+		BufferedReader br;
+		String line;
+		StringBuilder store = new StringBuilder();
+
+		try{
+			fr = new FileReader("\\Users\\marwaomar\\eclipse-workspace\\DbConnection\\MidtermNovember2018\\src\\data");
 
 
+		}catch(Exception e){
+			System.out.println("System was not able to find attached file ");
+		}
 
+		try{
+			assert fr != null;
+			br = new BufferedReader(fr);
+			while((line =br.readLine())!= null){
+				System.out.println(line);
+				store.append(line);
+
+			}
+		}catch(Exception e){
+			System.out.println("System was not able to read attached file ");
+		}
+
+		String[] storeArray = store.toString().split(" ");
+
+		Stack<String> myStack = new Stack<>();
+		for(String element : storeArray){
+			myStack.add(element);
+			myStack.push(element);
+		}
+		System.out.println("The LinkedList LIFO");
+		System.out.println(" The Stack  LIFO");
+
+		while(!myStack.isEmpty()){
+			System.out.println(myStack.pop() + "  ");
+		}
 	}
 
 }
