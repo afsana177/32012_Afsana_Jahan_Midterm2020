@@ -83,7 +83,7 @@ public class Sort {
     }
 
 
-    public int [] bucketSort(int [] array){
+    public int [] bucketSort(int[] array, int i){
         int [] list = array;
         //implement here
         
@@ -105,5 +105,11 @@ public class Sort {
         for(int i=0; i<array.length; i++){
             System.out.println(array[i]);
         }
+    }
+
+    public void quickSort(int[] num, int i, int i1) {
+    }
+
+    public void mergeSort(int[] num, int i, int i1) {
     }
 }

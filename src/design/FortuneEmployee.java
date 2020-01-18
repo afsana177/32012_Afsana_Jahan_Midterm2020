@@ -14,7 +14,10 @@ public class FortuneEmployee {
 	 *
 	 **/
 	public static void main(String[] args) {
-		
+
+		//EmployeeInfo emp = new EmployeeInfo();
+
+
 
 
 	}
